@@ -23,4 +23,4 @@ jobs:
 
       - name: Executer les tests
         run: |
-          python3 -m pytest
+          pytest
