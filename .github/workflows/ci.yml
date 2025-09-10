@@ -23,4 +23,5 @@ jobs:
 
       - name: Executer les tests
         run: |
+          export PYTHONPATH=src
           pytest
