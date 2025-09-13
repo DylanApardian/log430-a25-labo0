@@ -30,13 +30,13 @@ jobs:
           pytest
 
   deploy:
-    runs-on: [self-hosted]
+    runs-on: self-hosted
     needs: build
 
     steps:
-      - run: echo "Runner is working!"
+      - name: Checkout dépot
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
       - name: Déployer l'application
         run: |
           cd $GITHUB_WORKSPACE
