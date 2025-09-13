@@ -32,9 +32,10 @@ jobs:
   deploy:
     runs-on: self-hosted
     needs: build
+
     steps:
       - name: Checkout dépot
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Déployer l'application
         run: |
