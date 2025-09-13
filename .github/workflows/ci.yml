@@ -34,9 +34,9 @@ jobs:
     needs: build
 
     steps:
-      - name: Checkout dépot
-        uses: actions/checkout@v4
-      
+      - uses: actions/checkout@v4
       - name: Déployer l'application
         run: |
-          echo "Déploiement de l'application"
+          cd $GITHUB_WORKSPACE
+          docker compose down || true
+          docker compose up -d --build
