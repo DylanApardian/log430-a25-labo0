@@ -30,12 +30,12 @@ jobs:
           pytest
 
   deploy:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Linux, X64]
     needs: build
 
     steps:
       - run: echo "Runner is working!"
-      
+
       - uses: actions/checkout@v4
       - name: Déployer l'application
         run: |
