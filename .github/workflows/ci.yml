@@ -34,6 +34,8 @@ jobs:
     needs: build
 
     steps:
+      - run: echo "Runner is working!"
+      
       - uses: actions/checkout@v4
       - name: Déployer l'application
         run: |
