@@ -39,7 +39,4 @@ jobs:
       
       - name: Déployer l'application
         run: |
-          cd $GITHUB_WORKSPACE
-          docker compose down || true
-          docker compose up -d --build
-      
+          echo "Déploiement de l'application"
